@@ -45,9 +45,9 @@ const PORT = process.env.PORT || 3000;
 // 🔥 CORS Middleware (100% Bulletproof Fix)
 app.use(
   cors({
-    origin: "*", // Allows any domain
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    origin: "*", // Allow requests from any origin
+    methods: ["GET"],
+    allowedHeaders: ["Content-Type"],
   })
 );
 
