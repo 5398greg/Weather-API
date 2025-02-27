@@ -1,4 +1,3 @@
-const api_key = process.env.API_KEY;
 let Main_data = {};
 let temperature = document.getElementById("temp");
 let temperature2 = document.getElementById("temp2");
@@ -16,7 +15,9 @@ let gustsElement = document.getElementById("gusts");
 async function GetWeather() {
   try {
     const city = document.getElementById("city").value;
-    const response = await fetch(`http://localhost:3000/weather?city=${city}`);
+    const response = await fetch(
+      `https://your-backend.onrender.com/weather?city=${city}`
+    );
     const data = await response.json();
     Main_data = data;
     DisplayWeather();
