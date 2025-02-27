@@ -34,13 +34,13 @@
 // app.listen(PORT, () => {
 //   console.log(`Server running on port ${PORT}`);
 // });
-
 require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
+app.options("*", cors()); // Handle pre-flight CORS requests
 
 // 🔥 CORS Middleware (100% Bulletproof Fix)
 app.use(
