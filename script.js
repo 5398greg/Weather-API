@@ -1,3 +1,4 @@
+const api_key = "FF6Y85D3YSYJ2ST3BCVRMEDTS";
 let Main_data = {};
 let temperature = document.getElementById("temp");
 let temperature2 = document.getElementById("temp2");
@@ -16,7 +17,7 @@ async function GetWeather() {
   try {
     const city = document.getElementById("city").value;
     const response = await fetch(
-      `https://your-backend.onrender.com/weather?city=${city}`
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?key=${api_key}`
     );
     const data = await response.json();
     Main_data = data;
