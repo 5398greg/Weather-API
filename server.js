@@ -6,8 +6,17 @@ const cors = require("cors"); // Import CORS
 const app = express();
 const PORT = 3000;
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 // Allow CORS for all requests
-app.use(cors()); // This will fix your CORS issue
+app.use(cors());
 
 app.get("/weather", async (req, res) => {
   try {
