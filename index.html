@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Reveal</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="container-1">
+        <div class="input-div">
+          <img class="loc" src="sources/location.png" alt="location" />
+          <input
+            type="text"
+            class="city"
+            id="city"
+            placeholder="Enter Location"
+          />
+          <button class="bttn" onclick="GetWeather()">
+            <img
+              class="search"
+              src="sources/search-interface-symbol.png"
+              alt="search"
+            />
+          </button>
+        </div>
+
+        <div class="display-div">
+          <div class="display-1">
+            <p class="dtemp"><span id="temp">28</span><sup>°</sup></p>
+            <p class="what-day"><span id="what-day">Rainy</span> Day</p>
+            <p class="description" id="description">
+              Today, Expect some description of the weather conditions
+            </p>
+          </div>
+
+          <div class="box">
+            <div class="display-one">
+              <div class="display-2">
+                <div class="display-head">
+                  <img src="sources/celsius.png" alt="temperature" />
+                  <p class="title">Feels Like</p>
+                </div>
+                <hr />
+                <p class="dis"><span id="temp2">30</span>°</p>
+              </div>
+
+              <div class="display-3">
+                <div class="display-head">
+                  <img src="sources/precipitation.png" alt="precipitation" />
+                  <p class="title">Precipitation</p>
+                </div>
+                <hr />
+                <p class="dis"><span id="precipitation">2.3</span>&darr;</p>
+                <!-- <p>in the last 24h</p> -->
+              </div>
+            </div>
+
+            <div class="display-two">
+              <div class="display-4">
+                <div class="display-head">
+                  <img src="sources/visibility.png" alt="visibility" />
+                  <p class="title">visibility</p>
+                </div>
+                <hr />
+                <p class="dis"><span id="visibility">6</span> mi</p>
+              </div>
+
+              <div class="display-5">
+                <div class="display-head">
+                  <img src="sources/humidity.png" alt="humidity" />
+                  <p class="title">Humidity</p>
+                </div>
+                <hr />
+                <p class="dis"><span id="humidity">82</span>%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-12">
+        <div class="container-2">
+          <div class="display-head">
+            <img src="sources/clock.png" alt="clock" />
+            <p class="title">Houry forecast</p>
+          </div>
+          <hr />
+
+          <div class="hours-div">
+            <div class="hours">
+              <p class="next-hour">Now</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/fog.png" alt="fog" />
+            </div>
+
+            <div class="hours">
+              <p class="next-hour">15:00</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/heavy-rain.png" alt="rain" />
+            </div>
+
+            <div class="hours">
+              <p class="next-hour">16:00</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/snowy.png" alt="snow" />
+            </div>
+
+            <div class="hours">
+              <p class="next-hour">17:00</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/sun.png" alt="sun" />
+            </div>
+
+            <div class="hours">
+              <p class="next-hour">18:00</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/clouds.png" alt="clouds" />
+            </div>
+
+            <div class="hours">
+              <p class="next-hour">19:00</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/windy.png" alt="windy" />
+            </div>
+
+            <div class="hours">
+              <p class="next-hour">18:00</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/clouds.png" alt="clouds" />
+            </div>
+
+            <div class="hours">
+              <p class="next-hour">18:00</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/clouds.png" alt="clouds" />
+            </div>
+
+            <div class="hours">
+              <p class="next-hour">18:00</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/clouds.png" alt="clouds" />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-3">
+          <div class="display-head">
+            <img src="sources/week.png" alt="week" />
+            <p class="title">Week forecast</p>
+          </div>
+          <hr />
+          <div class="week-div" id="week-div">
+            <div class="week">
+              <p class="day-name">Today</p>
+              <p class="date">16/09</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/fog.png" alt="fog" />
+            </div>
+
+            <div class="week">
+              <p class="day-name">Tue</p>
+              <p class="date">16/09</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/heavy-rain.png" alt="rain" />
+            </div>
+
+            <div class="week">
+              <p class="day-name">Wed</p>
+              <p class="date">17/09</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/snowy.png" alt="snow" />
+            </div>
+
+            <div class="week">
+              <p class="day-name">Thur</p>
+              <p class="date">18/09</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/sun.png" alt="sun" />
+            </div>
+
+            <div class="week">
+              <p class="day-name">Fri</p>
+              <p class="date">19/09</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/clouds.png" alt="cloudy" />
+            </div>
+
+            <div class="week">
+              <p class="day-name">Sat</p>
+              <p class="date">20/09</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/windy.png" alt="" />
+            </div>
+
+            <div class="week">
+              <p class="day-name">Sun</p>
+              <p class="date">21/09</p>
+              <p><span class="temp">28</span>°</p>
+              <img src="sources/sun.png" alt="sun" />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-4">
+          <div class="location-div">
+            <div class="display-head">
+              <img src="sources/location.png" alt="location" />
+              <p class="title">Location</p>
+            </div>
+            <hr />
+            <div class="p-tag-location">
+              <p id="location">Kutus, Kirinyaga, Kenya</p>
+              <p>Lattitude: <span id="latitude">5.0091</span></p>
+              <p>Longitude: <span id="longitude">7.9817</span></p>
+            </div>
+          </div>
+
+          <div class="wind-div">
+            <div class="display-head">
+              <img src="sources/wind.png" alt="wind" />
+              <p class="title">Wind</p>
+            </div>
+            <hr />
+            <div class="wind">
+              <p id="wind">3</p>
+              <div>
+                <p>MPH</p>
+                <p>Wind</p>
+              </div>
+            </div>
+            <hr />
+            <div class="wind">
+              <p id="gusts">9</p>
+              <div>
+                <p>MPH</p>
+                <p>Gusts</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

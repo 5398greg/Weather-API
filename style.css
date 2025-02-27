@@ -1,0 +1,364 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-colour: #000000;
+  --bg-color: #70d6ff;
+  --input-colour: #ffffff5e;
+  --hr-colour: black;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+
+body {
+  font-family: "Inter";
+  /* height: 100vh; */
+}
+
+hr {
+  background-color: var(--hr-colour);
+  height: 2px;
+  border: none;
+}
+
+.container {
+  display: flex;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  gap: 30px;
+}
+
+.container-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+}
+
+.input-div {
+  border-radius: 15px;
+  background-color: var(--input-colour);
+  display: flex;
+  height: 40px;
+  align-items: center;
+  padding-left: 10px;
+  gap: 10px;
+}
+
+.bttn {
+  cursor: pointer;
+  padding: 4px;
+  margin-right: 3px;
+  border-radius: 50%;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  background: none;
+  border-radius: 15px;
+}
+
+.city {
+  background: none;
+  border: none;
+  width: calc(100% - 60px);
+  height: 100%;
+  outline: none;
+  padding-left: 10px;
+  border-radius: 15px;
+}
+
+.city::placeholder {
+  color: var(--text-colour);
+}
+
+.display-div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dtemp {
+  font-size: 6rem;
+  font-family: "Pacifico";
+}
+
+.what-day {
+  font-size: 2rem;
+}
+
+.description {
+  font-size: 0.75rem;
+}
+
+.display-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  text-align: center;
+}
+
+.box {
+  /* height: 50%; */
+  width: 100%;
+  background-color: var(--input-colour);
+  border-radius: 20px;
+  padding: 10px;
+  gap: 5px;
+  backdrop-filter: blur(10px);
+}
+
+.dis {
+  font-family: "Pacifico";
+  font-size: 3rem;
+}
+
+.display-one {
+  display: flex;
+  /* height: 50%; */
+  margin-bottom: 20px;
+}
+
+.display-2 {
+  width: 50%;
+}
+
+.display-head {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.display-3 {
+  width: 50%;
+}
+
+.display-two {
+  display: flex;
+  height: 50%;
+}
+
+.display-4 {
+  width: 50%;
+}
+
+.display-5 {
+  width: 50%;
+}
+
+.container-12 {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: 20px;
+  /* margin-top: 50px; */
+  justify-content: center;
+}
+
+.container-2 {
+  background-color: var(--input-colour);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  /* margin-top: 20px; */
+  padding: 1rem;
+}
+
+.container-3 {
+  background-color: var(--input-colour);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 1rem;
+}
+
+.week p,
+.hours p {
+  margin: 0.3rem;
+}
+
+.week p:first-child,
+.hours p:first-child {
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.week p:last-child,
+.hours p:last-child {
+  margin-bottom: 0;
+}
+
+.hours-div,
+.week-div {
+  display: flex;
+  width: 100%;
+}
+
+.hours-div,
+.week-div {
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+/* .hours-div img {
+  height: 30px;
+} */
+
+.hours,
+.week {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px;
+}
+
+.hours p:first-child,
+.week p:first-child {
+  font-size: 0.85rem;
+}
+
+.week #date {
+  font-size: 0.75rem;
+}
+
+.container-4 {
+  display: flex;
+  gap: 10px;
+}
+
+.location-div {
+  width: 50%;
+  background-color: var(--input-colour);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 1rem;
+}
+
+.location-div p {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.p-tag-location {
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.p-tag-location p {
+  padding: 0.5rem;
+}
+
+.wind-div {
+  width: 50%;
+  background-color: var(--input-colour);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 1rem;
+}
+
+.wind {
+  display: flex;
+}
+
+.wind div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+#wind,
+#gusts {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Pacifico";
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .container-1 {
+    width: 50%;
+  }
+
+  .container-12 {
+    width: 50%;
+  }
+
+  /* .container-2,
+  .container-3 {
+    height: 30%;
+  } */
+
+  .week,
+  .hours {
+    padding: 5px;
+    margin: 2.5px;
+  }
+
+  .location-div,
+  .wind-div {
+    margin-top: 5px;
+    padding: 10px;
+  }
+
+  .display-head {
+    gap: 5px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 800px) {
+  .box {
+    padding: 30px;
+  }
+
+  .container {
+    flex-direction: column;
+    margin-left: -10px;
+  }
+
+  .display-1 {
+    margin-bottom: 20px;
+  }
+
+  .container-1,
+  .container-12,
+  .location-div,
+  .wind-div {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .display-one,
+  .display-two,
+  .container-4 {
+    flex-direction: column;
+  }
+
+  .display-2,
+  .display-3,
+  .display-4,
+  .display-5 {
+    width: 100%;
+  }
+
+  .location-div,
+  .wind-div {
+    margin-left: -5px;
+  }
+}
